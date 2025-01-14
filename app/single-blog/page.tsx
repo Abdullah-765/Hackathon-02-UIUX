@@ -1,61 +1,46 @@
-'use client'
-
 import { Josefin_Sans } from "next/font/google";
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
   style: ["italic", "normal"],
   weight: ["100", "300", "400", "500", "600", "700"],
 });
-
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Ghost, Menu } from "lucide-react";
-import { useState } from "react";
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
-  PaginationPrevious,
+  PaginationPrevious
 } from "@/components/ui/pagination"
 
+import SidebarBlogs from "@/components/sidebar-blog";
+import { Button } from "@/components/ui/button";
 export default function BlogPage() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  return (
+    return (
     <div>
       <ul id="header-heading">
         <div className="h-[20vh] mx-0 px-[40px] flex flex-col justify-center bg-[#F6F5FF] w-[100%]">
           <h1
             className={`${josefinSans.className} text-[#101750] text-[22px] font-bold`}
           >
-            Blog Page
+            Single Blog
           </h1>
           <li className="text-[10px]">
             <p>Home . </p>
             <p>Pages . </p>
-            <p className="text-[#FB2E86]">Blog Page</p>
+            <p className="text-[#FB2E86]">Single Blog</p>
           </li>
         </div>
       </ul>
 
       <div className="flex items-center justify-center">
         <div id="collapsable-sidebar">
-          <button
-            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-            className="lg:hidden fixed top-1 left-2 z-50 p-1 bg-white rounded shadow"
-          >
-            <Menu size={20} />
-          </button>
-          <div className="flex items-center justify-center relative">
+          <div className="flex items-start justify-center relative">
 
             {/* main content */}
-            <div>
               <div className="mx-[20px] mt-[40px]">
-                <ul className="flex flex-col gap-[30px] items-center w-fit justify-center mt-[40px] " >
-
-                  <div className="flex items-center justify-center flex-col max-w-[600px]">
+                <ul className="flex flex-col gap-[30px] items-center w-fit max-w-[800px] justify-center mt-[40px] " >
+                  <div className="flex items-center justify-center flex-col max-w-[800px]">
                     <img src="/blog-page/main-blog-1.png" alt="" className="bg-[#F6F7FB] rounded-md mb-[10px]" />
                     <div className='p-[10px]'>
                       <ul className="flex items-center bg-white w-[100%] gap-[4px]">
@@ -63,206 +48,194 @@ export default function BlogPage() {
                         <li className={`${josefinSans.className} text-[#1A0B5B] items-center flex gap-[5px]`}><img src="/latest-blog/calender-vector.png" alt="" className='object-contain' /><span className="bg-[#FFECE2]">Aug 09 2020</span></li>
                       </ul>
                       <ul>
-                        <h3 className={`${josefinSans.className} text-[15px] text-[#1A0B5B]  font-bold mt-[20px]`}>Mauris at orci non vulputate diam tincidunt nec.</h3>
-                        <p className='text-[#72718F] mt-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.</p>
-                        <p className='text-[#72718F] mt-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, </p>
-                        <div className='bg-[#FAFAFB] border-l border-[#FC45A0] mt-[20px] leading-6 px-[10px] pt-[20px] pb-[10px] text-[14px] italic text-[#969CB4]'>
+                        <h3 className={`${josefinSans.className} text-[18px] text-[#1A0B5B]  font-bold mt-[20px]`}>Mauris at orci non vulputate diam tincidunt nec.</h3>
+                        <p className='text-[#8A8FB9] leading-6 text-[14px] mt-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.</p>
+                        <p className='text-[#8A8FB9] leading-6 text-[14px] mt-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, </p>
+                        <div className='bg-[#FAFAFB] border-l border-[#FC45A0] mt-[20px] leading-6 px-[10px] pt-[20px] pb-[10px] text-[16px] italic text-[#969CB4]'>
                           <p className={josefinSans.className}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequattoamk risusu”</p>
                         </div>
                       </ul>
                     </div>
                   </div>
+                  <div className="flex flex-wrap items-center justify-between gap-[10px] md:justify-center">
+                    <li><img src="/single-blog/single-blog-2.png" alt="" className="max-w-[380px]" /></li>
+                    <li><img src="/single-blog/single-blog-1.png" alt="" className="max-w-[380px]"/></li>
+                  </div>
+                        <p className='text-[#8A8FB9] leading-6 text-[14px] mt-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, </p>
+      <div className="mx-[20px] mt-[40px] flex flex-wrap gap-[20px] items-center justify-between">
+        <ul className="max-w-[170px] p-[5px] box-border">
+          <li>
+            <img src="/single-blog/1.png" alt="" />
+          </li>
+          <li className="flex-col justify-between items-start mt-[10px]">
+            <h3 className={`${josefinSans.className} text-[22px] `}>Quam sed</h3>
+
+          </li>
+
+          <ul className="flex justify-between">
+                      <div className={`${josefinSans.className} flex items-center gap-[10px]`}><p className="text-[#151875]">$32.00</p>
+                      <p className="text-[#FF38B0] line-through">$56.00</p></div>
+                      <li className="flex gap-[1px] items-center">
+                {[1, 2, 3, 4].map((_, i) => (
+                  <img key={i} src="/star-filled.png" alt="Filled star" className="w-3 h-3" />
+                ))}
+                <img src="/star-empty.png" alt="Empty star" className="w-3 h-3" />
+            </li>
+
+          </ul>
+        </ul>
+        <ul className="max-w-[170px] p-[5px]">
+          <li>
+            <img src="/single-blog/2.png" alt="" />
+          </li>
+          <li className="flex-col justify-between items-start mt-[10px]">
+            <h3 className={`${josefinSans.className} text-[22px] `}>Quam sed</h3>
+
+          </li>
+
+          <ul className="flex justify-between">
+                      <div className={`${josefinSans.className} flex items-center gap-[10px]`}><p className="text-[#151875]">$32.00</p>
+                      <p className="text-[#FF38B0] line-through">$56.00</p></div>
+                      <li className="flex gap-[1px] items-center">
+                {[1, 2, 3, 4].map((_, i) => (
+                  <img key={i} src="/star-filled.png" alt="Filled star" className="w-3 h-3" />
+                ))}
+                <img src="/star-empty.png" alt="Empty star" className="w-3 h-3" />
+            </li>
+
+          </ul>
+        </ul>
+
+        <ul className="max-w-[170px] p-[5px]">
+          <li>
+            <img src="/single-blog/3.png" alt="" />
+          </li>
+          <li className="flex-col justify-between items-start mt-[10px]">
+            <h3 className={`${josefinSans.className} text-[22px] `}>Quam sed</h3>
+
+          </li>
+
+          <ul className="flex justify-between">
+                      <div className={`${josefinSans.className} flex items-center gap-[10px]`}><p className="text-[#151875]">$32.00</p>
+                      <p className="text-[#FF38B0] line-through">$56.00</p></div>
+                      <li className="flex gap-[1px] items-center">
+                {[1, 2, 3, 4].map((_, i) => (
+                  <img key={i} src="/star-filled.png" alt="Filled star" className="w-3 h-3" />
+                ))}
+                <img src="/star-empty.png" alt="Empty star" className="w-3 h-3" />
+            </li>
+
+          </ul>
+        </ul>
+
+        <ul className="max-w-[170px] p-[5px]">
+          <li>
+            <img src="/single-blog/4.png" alt="" />
+          </li>
+          <li className="flex-col justify-between items-start mt-[10px]">
+            <h3 className={`${josefinSans.className} text-[22px] `}>Quam sed</h3>
+
+          </li>
+
+          <ul className="flex justify-between">
+                      <div className={`${josefinSans.className} flex items-center gap-[10px]`}><p className="text-[#151875]">$32.00</p>
+                      <p className="text-[#FF38B0] line-through">$56.00</p></div>
+                      <li className="flex gap-[1px] items-center">
+                {[1, 2, 3, 4].map((_, i) => (
+                  <img key={i} src="/star-filled.png" alt="Filled star" className="w-3 h-3" />
+                ))}
+                <img src="/star-empty.png" alt="Empty star" className="w-3 h-3" />
+            </li>
+
+          </ul>
+        </ul>
+      </div>
+
+      <p className='text-[#8A8FB9] leading-6 text-[14px] mt-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, </p>
+
+      <p className='text-[#8A8FB9] leading-6 text-[14px] mt-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, </p>
                 </ul>
-              </div>
-
-
-              <Pagination className="mt-[30px]">
-                <PaginationContent>
-                  <PaginationItem>
-                    <PaginationLink href="#" isActive>1</PaginationLink>
-                  </PaginationItem>
-                  <PaginationItem>
-                    <PaginationLink href="#" >
-                      2
-                    </PaginationLink>
-                  </PaginationItem>
-                  <PaginationItem>
-                    <PaginationLink href="#">3</PaginationLink>
-                  </PaginationItem>
-                  <PaginationItem>
-                    <PaginationLink href="#">4</PaginationLink>
-                  </PaginationItem>
-                </PaginationContent>
-              </Pagination>
-
-            </div>
-            {/* Sidebar */}
-            <div
-              id="sidebar"
-              className={`
-  fixed lg:static top-0 left-0 h-screen lg:h-auto overflow-y-auto lg:overflow-visible top-0 left-0 h-screen w-fit 
-  bg-white shadow-lg lg:shadow-none
-  transition-transform duration-300 ease-in-out
-  ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
-  lg:translate-x-0 lg:w-auto
-  overflow-y-auto z-40
-  mx-0 lg:mx-[20px] 
-  mt-[30px] flex flex-col gap-[20px]
-  p-4 pb-[100px] lg:p-0
-`}
-            >
-              {/* Existing sidebar content... */}
-              <ul className="mx-[20px] gap-y-[30px] flex flex-col">
-                <div className="Search">
-                  <h2 className={`${josefinSans.className} text-[#101750] text-[22px] font-bold`}>Search</h2>
-                  <div className="flex items-center justify-center border-[#BDBDD8] px-[5px] border w-fit">
-                    <Input placeholder="Search for posts" className="border-none rounded-none shadow-none outdivne-none"></Input><img src="/search-grey-sidebar.png" alt="" />
-                  </div>
-                </div >
-                <div className="Categories">
-                  <h2 className={`${josefinSans.className} text-[#101750] text-[22px] font-bold mb-[20px]`}>Categories</h2>
-                  <div className="flex items-center w-full">
-                    <ul className="grid grid-cols-2 gap-[10px]">
-                      <li><Button variant={"ghost"} className="text-[12px] bg-white text-[#3F509E] shadow-none active:bg-[#F939BF] active:text-white">Hobbies (14)</Button></li>
-                      <li><Button variant={"ghost"} className="text-[12px] bg-white text-[#3F509E] shadow-none active:bg-[#F939BF] active:text-white">Women (21)</Button></li>
-                      <li><Button variant={"ghost"} className="text-[12px] bg-white text-[#3F509E] shadow-none active:bg-[#F939BF] active:text-white">Women (21)</Button></li>
-                      <li><Button variant={"ghost"} className="text-[12px] bg-white text-[#3F509E] shadow-none active:bg-[#F939BF] active:text-white">Women (21)</Button></li>
-                      <li><Button variant={"ghost"} className="text-[12px] bg-white text-[#3F509E] shadow-none active:bg-[#F939BF] active:text-white">Women (21)</Button></li>
-                      <li><Button variant={"ghost"} className="text-[12px] bg-white text-[#3F509E] shadow-none active:bg-[#F939BF] active:text-white">Women (21)</Button></li>
-                    </ul>
-                  </div>
-                </div >
-                <div className="Recent-Post">
-                  <h2 className={`${josefinSans.className} text-[#101750] text-[22px] font-bold mb-[20px]`}>Recent post</h2>
-                  <div className="flex items-center w-full">
-                    <table className="w-fit border-collapse">
-                      <tbody>
-                        <tr>
-                          <td className="flex items-center gap-[5px]">
-                            <div className="relative min-w-[70px] min-h-[50px] max-w-[70px] max-h-[50px]">
-                              <img src="/blog-page/1.png" alt="Product 1" />                      </div>
-                            <div>
-                              <p className={`${josefinSans.className} text-[#3F509E] text-[14px]`}>It is a long established fact</p>
-                              <p className="text-[12px] text-gray-500">Aug 09 2020</p>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="pt-4 flex items-center gap-[5px]">
-                            <div className="relative min-w-[70px] min-h-[50px] max-w-[70px] max-h-[50px]">
-                              <img src="/blog-page/2.png" alt="Product 1" />                      </div>
-                            <div>
-                              <p className={`${josefinSans.className} text-[#3F509E] text-[14px]`}>Vel fascinus purse</p>
-                              <p className="text-[12px] text-gray-500">Color: Red</p>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="pt-4 flex items-center gap-[5px]">
-                            <div className="relative min-w-[70px] min-h-[50px] max-w-[70px] max-h-[50px]">
-                              <img src="/blog-page/3.png" alt="Product 1" />                      </div>
-                            <div>
-                              <p className={`${josefinSans.className} text-[#3F509E] text-[14px]`}>Ac wrap watches</p>
-                              <p className="text-[12px] text-gray-500">Color: Black</p>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="pt-4 flex items-center gap-[5px]">
-                            <div className="relative min-w-[70px] min-h-[50px] max-w-[70px] max-h-[50px]">
-                              <img src="/blog-page/4.png" alt="Product 1" />                      </div>
-                            <div>
-                              <p className={`${josefinSans.className} text-[#3F509E] text-[14px]`}>Ac wrap watches</p>
-                              <p className="text-[12px] text-gray-500">Color: Black</p>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div >
-                <div className="Sale-Product">
-                  <h2 className={`${josefinSans.className} text-[#101750] text-[22px] font-bold mb-[20px]`}>Sales Product</h2>
-                  <div className="flex items-center w-full">
-                    <table className="w-fit border-collapse">
-                      <tbody>
-                        <tr>
-                          <td className="flex items-center gap-[5px]">
-                            <div className="relative min-w-[70px] min-h-[50px] max-w-[70px] max-h-[50px]">
-                              <img src="/blog-page/5.png" alt="Product 1" />                      </div>
-                            <div>
-                              <p className={`${josefinSans.className} text-[#3F509E] text-[14px]`}>Elit ornare in enim mauris.</p>
-                              <p className="text-[12px] text-gray-500">Aug 09 2020</p>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="pt-4 flex items-center gap-[5px]">
-                            <div className="relative min-w-[70px] min-h-[50px] max-w-[70px] max-h-[50px]">
-                              <img src="/blog-page/6.png" alt="Product 1" />                      </div>
-                            <div>
-                              <p className={`${josefinSans.className} text-[#3F509E] text-[14px]`}>Viverra pulvinar et enim.</p>
-                              <p className="text-[12px] text-gray-500">Aug 09 2020</p>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="pt-4 flex items-center gap-[5px]">
-                            <div className="relative min-w-[70px] min-h-[50px] max-w-[70px] max-h-[50px]">
-                              <img src="/blog-page/7.png" alt="Product 1" />                      </div>
-                            <div>
-                              <p className={`${josefinSans.className} text-[#3F509E] text-[14px]`}>Mattis varius donec fdsfd</p>
-                              <p className="text-[12px] text-gray-500">Aug 09 2020</p>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div >
-                <div className="Offer-Product">
-                  <h2 className={`${josefinSans.className} text-[#101750] text-[22px] font-bold mb-[20px]`}>Offer Product</h2>
-                  <div className="flex items-center w-full">
-                    <ul className="grid grid-cols-2 gap-y-[20px] gap-x-[15px]">
-                      <li className="flex flex-col gap-[3px]"><img src="/blog-page/8.png" alt="" /><h2 className="text-[#151875] font-semibold">Duis lectus est.</h2><p className="text-[#8A8FB9] text-[10px]">$12.00 - $15.00</p></li>
-                      <li className="flex flex-col gap-[3px]"><img src="/blog-page/9.png" alt="" /><h2 className="text-[#151875] font-semibold">Duis lectus est.</h2><p className="text-[#8A8FB9] text-[10px]">$12.00 - $15.00</p></li>
-                      <li className="flex flex-col gap-[3px]"><img src="/blog-page/10.png" alt="" /><h2 className="text-[#151875] font-semibold">Duis lectus est.</h2><p className="text-[#8A8FB9] text-[10px]">$12.00 - $15.00</p></li>
-                      <li className="flex flex-col gap-[3px]"><img src="/blog-page/11.png" alt="" /><h2 className="text-[#151875] font-semibold">Duis lectus est.</h2><p className="text-[#8A8FB9] text-[10px]">$12.00 - $15.00</p></li>
-
-                    </ul>
-                  </div>
-                </div >
-                <div className="Follow">
-                  <h2 className={`${josefinSans.className} text-[#101750] text-[22px] font-bold mb-[20px]`}>Follow</h2>
-                  <div className="flex items-center gap-[10px] w-full">
+                <div className="flex items-center justify-center gap-[10px] w-full mt-[20px]">
                     <img src="/blog-page/face.png" alt="" />
                     <img src="/blog-page/insta.png" alt="" />
                     <img src="/blog-page/twitter.png" alt="" />
                   </div>
-                </div >
-                <div className="tags">
-                  <h2 className={`${josefinSans.className} text-[#101750] text-[22px] font-bold mb-[20px]`}>Tags</h2>
-                  <ul className="flex items-center flex-wrap gap-[10px] w-full">
-                    <li className="text-[#151875] underline text-[14px]">General</li>
-                    <li className="text-[#FB2E86] underline text-[14px]">Atsanil</li>
-                    <li className="text-[#151875] underline text-[14px]">Insas.</li>
-                    <li className="text-[#151875] underline text-[14px]">Bibsaas</li>
-                    <li className="text-[#151875] underline text-[14px]">Nulla.</li>
-                  </ul>
-                </div >
-              </ul>
-            </div>
+
+                  
+<Pagination className="mt-[30px] flex justify-between bg-[#F7F8FB]">
+  <PaginationPrevious className="text-[#8A8FB9] border-none"/>
+      <PaginationContent>
+        
+      </PaginationContent>
+      <PaginationNext className="text-[#8A8FB9] border-none"/>
+    </Pagination>
+
+    <div className="w-[80%] mt-[20px]">
+
+<div className="flex flex-col gap-[20px]">
+<ul className="flex items-center gap-[10px] w-full border p-[20px] shadow-evenly-around">
+         <li><img src="/single-blog/bottom-card-1.png" alt="" className="max-w-[130px]"/></li>
+         <ul>
+            <li className="flex items-center">                        <h3 className={`${josefinSans.className} text-[18px] text-[#1A0B5B]  font-[600] mr-[20px]`}>Sapien ac</h3>
+            <h3 className="text-[#A3A2B6] text-[14px]">Jan 09 2020</h3>
+            </li>
+            <li>
+            <p className='text-[#8A8FB9] leading-6 text-[16px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At in vitae rutrum vulputate consectetur.</p>
+            </li>
+         </ul>
+      </ul>
+      <ul className="flex items-center gap-[10px] w-full border p-[20px] shadow-evenly-around">
+         <li><img src="/single-blog/bottom-card-2.png" alt="" className="max-w-[130px]"/></li>
+         <ul>
+            <li className="flex items-center">                        <h3 className={`${josefinSans.className} text-[18px] text-[#1A0B5B]  font-[600] mr-[20px]`}>Augue conva</h3>
+            <h3 className="text-[#A3A2B6] text-[14px]">Jan 09 2020</h3>
+            </li>
+            <li>
+            <p className='text-[#8A8FB9] leading-6 text-[16px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At in vitae rutrum vulputate consectetur.</p>
+            </li>
+         </ul>
+      </ul>
+
+</div>
+
+      <ul className="w-full flex flex-col mt-[70px]">
+        <li className="flex gap-[30px] flex-wrap"><input placeholder="Your Name*" type="text" className="flex-1 h-[45px] text-[14px] p-[8px] border border-[#8A8FB9] rounded-none outline-none focus:outline-none"/>
+        <input placeholder="Write Your Email*" type="text" className="flex-1 h-[45px] text-[14px] p-[8px] border border-[#8A8FB9] rounded-none outline-none focus:outline-none"/></li>
+        <li>
+        <textarea placeholder="Write Your Email*"
+         className="flex-1 mt-[30px] h-[170px] text-[14px] p-[15px] border border-[#8A8FB9] rounded-none outline-none focus:outline-none"/>
+        </li>
+
+
+                    <li className="mt-[20px]">
+                      <div className="relative ">
+                      <input
+                        type="checkbox"
+                        id="checkbox1"
+                        className="peer hidden"
+                      />
+                      <label
+                        htmlFor="checkbox1"
+                        className="flex items-center justify-center w-4 h-4 bg-[#FB2E86] text-[white] font-bold peer-checked:text-[#FB2E86] cursor-pointer"
+                      >
+                        {/* The checkmark */}
+                        &#10003;
+                      </label>
+
+                      </div>
+                      <p className="text-[14px] text-[#8A91AB]">Save my name, email, and website in this browser for the next time I comment.</p>
+                    </li>
+                    <Button className="w-[100%] text-[12px] rounded-none bg-[#FB2E86] mt-[30px] p-[10px] hover:bg-[#FB2E86] hover:opacity-[0.9]
+ ">Continue Shipping</Button>
+
+      </ul>
+    </div>
+              </div>
+            {/* Sidebar */}
+            <SidebarBlogs/>
 
 
           </div>
-
-          {/* Overlay */}
-          {isSidebarOpen && (
-            <div
-              className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
-              onClick={() => setIsSidebarOpen(false)}
-            />
-          )}
         </div>
       </div>
       <div className="flex flex-col justify-center items-center">
