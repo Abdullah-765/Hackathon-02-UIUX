@@ -3,6 +3,7 @@
 import { Josefin_Sans } from "next/font/google";
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
+  style: ["italic", "normal"],
   weight: ["100", "300", "400", "500", "600", "700"],
 });
 
@@ -48,9 +49,9 @@ export default function BlogPage() {
             <Menu size={20} />
           </button>
           <div className="flex items-center justify-center relative">
-          
-                      {/* main content */}
-                      <div>
+
+            {/* main content */}
+            <div>
               <div className="mx-[20px] mt-[40px]">
                 <ul className="flex flex-col gap-[30px] items-center w-fit justify-center mt-[40px] " >
 
@@ -62,37 +63,12 @@ export default function BlogPage() {
                         <li className={`${josefinSans.className} text-[#1A0B5B] items-center flex gap-[5px]`}><img src="/latest-blog/calender-vector.png" alt="" className='object-contain' /><span className="bg-[#FFECE2]">Aug 09 2020</span></li>
                       </ul>
                       <ul>
-                        <h3 className={`${josefinSans.className} text-[15px] text-[#1A0B5B]  font-bold mt-[10px]`}>Mauris at orci non vulputate diam tincidunt nec.</h3>
-                        <p className='text-[#72718F] leading-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.</p>
-                        <p className='leading-6 font-border text-[#1A0B5B]'>Read More <span></span></p>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-center flex-col max-w-[600px]">
-                    <img src="/blog-page/main-blog-2.png" alt="" className="bg-[#F6F7FB] rounded-md mb-[10px]" />
-                    <div className='p-[10px]'>
-                      <ul className="flex items-center bg-white w-[100%] gap-[4px]">
-                        <li className={`${josefinSans.className} text-[#1A0B5B] items-center flex gap-[5px] mr-[50px]`}><img src="/latest-blog/pen-vector.png" alt="" className='object-contain' /><span className="bg-[#FFE7F9]">Surf Auxion</span></li>
-                        <li className={`${josefinSans.className} text-[#1A0B5B] items-center flex gap-[5px]`}><img src="/latest-blog/calender-vector.png" alt="" className='object-contain' /><span className="bg-[#FFECE2]">Aug 09 2020</span></li>
-                      </ul>
-                      <ul>
-                        <h3 className={`${josefinSans.className} text-[15px] text-[#1A0B5B]  font-bold mt-[10px]`}>Mauris at orci non vulputate diam tincidunt nec.</h3>
-                        <p className='text-[#72718F] leading-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.</p>
-                        <p className='leading-6 font-border text-[#1A0B5B]'>Read More <span></span></p>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-center flex-col max-w-[600px]">
-                    <img src="/blog-page/main-blog-3.png" alt="" className="bg-[#F6F7FB] rounded-md mb-[10px]" />
-                    <div className='p-[10px]'>
-                      <ul className="flex items-center bg-white w-[100%] gap-[4px]">
-                        <li className={`${josefinSans.className} text-[#1A0B5B] items-center flex gap-[5px] mr-[50px]`}><img src="/latest-blog/pen-vector.png" alt="" className='object-contain' /><span className="bg-[#FFE7F9]">Surf Auxion</span></li>
-                        <li className={`${josefinSans.className} text-[#1A0B5B] items-center flex gap-[5px]`}><img src="/latest-blog/calender-vector.png" alt="" className='object-contain' /><span className="bg-[#FFECE2]">Aug 09 2020</span></li>
-                      </ul>
-                      <ul>
-                        <h3 className={`${josefinSans.className} text-[15px] text-[#1A0B5B]  font-bold mt-[10px]`}>Mauris at orci non vulputate diam tincidunt nec.</h3>
-                        <p className='text-[#72718F] leading-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.</p>
-                        <p className='leading-6 font-border text-[#1A0B5B]'>Read More <span></span></p>
+                        <h3 className={`${josefinSans.className} text-[15px] text-[#1A0B5B]  font-bold mt-[20px]`}>Mauris at orci non vulputate diam tincidunt nec.</h3>
+                        <p className='text-[#72718F] mt-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.</p>
+                        <p className='text-[#72718F] mt-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, </p>
+                        <div className='bg-[#FAFAFB] border-l border-[#FC45A0] mt-[20px] leading-6 px-[10px] pt-[20px] pb-[10px] text-[14px] italic text-[#969CB4]'>
+                          <p className={josefinSans.className}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequattoamk risusu”</p>
+                        </div>
                       </ul>
                     </div>
                   </div>
@@ -100,24 +76,24 @@ export default function BlogPage() {
               </div>
 
 
-<Pagination className="mt-[30px]">
-      <PaginationContent>
-        <PaginationItem>
-          <PaginationLink href="#" isActive>1</PaginationLink>
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationLink href="#" >
-            2
-          </PaginationLink>
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationLink href="#">3</PaginationLink>
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationLink href="#">4</PaginationLink>
-        </PaginationItem>
-      </PaginationContent>
-    </Pagination>
+              <Pagination className="mt-[30px]">
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationLink href="#" isActive>1</PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink href="#" >
+                      2
+                    </PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink href="#">3</PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink href="#">4</PaginationLink>
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
 
             </div>
             {/* Sidebar */}
@@ -289,10 +265,10 @@ export default function BlogPage() {
           )}
         </div>
       </div>
-<div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
         <img src="/grid-default/image 1174.png" alt="" className="mt-[50px]" />
 
-</div>
+      </div>
     </div>
 
 
