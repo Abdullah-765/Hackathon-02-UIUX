@@ -15,6 +15,7 @@ const config: Config = {
   		},
 		  boxShadow: {
 			'evenly-around': '0 0 10px 3px rgba(0, 0, 0, 0.05)', // Adjust values as needed
+			'blue-dark': '-15px 15px 0 #2B3CAB'
 		  },
   		borderRadius: {
   			lg: 'var(--radius)',
