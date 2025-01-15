@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Ghost, Menu } from "lucide-react";
 import { useState } from "react";
 
-export default function sidebarBlogs() {
+export default function SidebarBlogs() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <div>

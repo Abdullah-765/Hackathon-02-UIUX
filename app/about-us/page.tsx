@@ -7,11 +7,10 @@ const josefinSans = Josefin_Sans({
 
 
 import { Button } from "@/components/ui/button";
-import WhatWeOffer from "@/components/what-offer";
 
 import * as React from "react"
 
-export default function aboutUs() {
+export default function AboutUs() {
   return (
     <div>
       <div className="h-[20vh] mx-0 px-[40px] flex flex-col justify-center bg-[#F6F5FF] w-[100%]">
