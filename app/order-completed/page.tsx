@@ -1,4 +1,5 @@
 import { Josefin_Sans } from "next/font/google";
+import Link from "next/link";
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "600", "700"],
@@ -34,7 +35,7 @@ export default function OrderCompleted() {
               hours. You will receive an email confirmation when your order is completed.
             </p>
             <button className="w-[150px] bg-[#FB2E86] text-white rounded-sm text-center py-3">
-              Continue Shopping
+              <Link href={"/"}>Continue Shopping</Link>
             </button>
           </div>
 

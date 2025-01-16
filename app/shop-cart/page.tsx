@@ -3,7 +3,7 @@ const josefinSans = Josefin_Sans({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "600", "700"],
 });
-
+import Link from "next/link";
 
 export default function ShopCart() {
   return (
@@ -157,7 +157,7 @@ export default function ShopCart() {
 
 
               <button className="w-full bg-green-500 text-white text-center py-3 hover:bg-green-600">
-                Proceed To Checkout
+                <Link href={'/hekto-demo'}>Proceed To Checkout</Link>
               </button>
             </div>
 

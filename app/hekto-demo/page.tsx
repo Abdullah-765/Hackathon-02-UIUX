@@ -1,3 +1,5 @@
+
+import Link from "next/link";
 import { Josefin_Sans } from "next/font/google";
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
@@ -69,7 +71,7 @@ export default function HektoDemo() {
 
 
             <button className="w-[60%] bg-[#FB2E86] text-white text-center py-3">
-              Continue Shiping
+            <Link href="/order-completed">Continue Shiping</Link>
             </button>
           </div>
         </div>
@@ -172,7 +174,7 @@ export default function HektoDemo() {
 
               </div>
               <button className="w-full bg-green-500 text-white text-center py-3 hover:bg-green-600">
-                Proceed To Checkout
+                <Link href="/order-completed">Proceed To Checkout</Link>
               </button>
             </div>
 

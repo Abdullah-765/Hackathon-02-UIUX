@@ -9,6 +9,7 @@ const josefinSans = Josefin_Sans({
 import { Button } from "@/components/ui/button";
 
 import * as React from "react"
+import Link from "next/link";
 
 export default function AboutUs() {
   return (
@@ -35,7 +36,7 @@ export default function AboutUs() {
               <br />Business, History
             </h1>
               <p className='text-[#8A8FB9] leading-6 text-[14px]'>Lorem ipsum dolor sit amet, consecteturadipiscingelit. Mattis nequeultricesmattisaliquam, malesuada diam est. Malesuadasemtristiqueameterat vitae eget dolor lobortis. Accumsanfaucibus vitae lobortisquisbibendumquam.</p>
-              <Button variant={'ActivePage'} className="bg-[#FB2E86] rounded-sm px-[20px]">Contact us</Button>
+              <Button variant={'ActivePage'} className="bg-[#FB2E86] rounded-sm px-[20px]"><Link href={"/contact-us"}>Contact us</Link></Button>
             </li>
           </ul>
           <div className="mt-[40px]">
