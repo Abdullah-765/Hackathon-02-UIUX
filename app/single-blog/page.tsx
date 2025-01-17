@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 export default function BlogPage() {
     return (
     <div>
-      <ul id="header-heading">
+      <ul className="header-heading">
         <div className="h-[20vh] mx-0 px-[40px] flex flex-col justify-center bg-[#F6F5FF] w-[100%]">
           <h1
             className={`${josefinSans.className} text-[#101750] text-[22px] font-bold`}
@@ -33,7 +33,7 @@ export default function BlogPage() {
         </div>
       </ul>
 
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center ">
         <div id="collapsable-sidebar">
           <div className="flex items-start justify-center relative">
 

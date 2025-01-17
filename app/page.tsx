@@ -12,7 +12,7 @@ import LatestBlog from "@/components/latest-blog";
 export default function Home() {
   
   return (
-    <div>
+    <div className="flex flex-col gap-[50px]">
       <MarketingPanel/>
       <FeaturedProducts/>
       <LatestProducts/>

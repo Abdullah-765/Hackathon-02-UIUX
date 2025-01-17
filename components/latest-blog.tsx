@@ -6,11 +6,11 @@ const josefinSans = Josefin_Sans({
 
 export default function LatestBlog(){
    return (
-    <div className="mx-[20px] mt-[40px]">
-      <img src="/top-categories/promotional-banner.png" alt="" />
+    <div className="mx-[20px] lg:mx-[150px]">
+      <img src="/top-categories/promotional-banner.png" className='justify-self-center' alt="" />
         <h2 className={`${josefinSans.className} mt-6 mb-1 text-center text-[26px] text-[#1A0B5B] font-bold`}>Latest Blog</h2>
         
-        <ul className="grid grid-cols-1 gap-[30px] place-items-center mt-[40px] lg:grid-cols-3 " >
+        <ul className="flex flex-wrap gap-[40px] items-center justify-center mt-[40px] lg:grid-cols-3 " >
 
         <div className="flex items-center justify-center flex-col w-[280px] shadow-md">
             <img src="/latest-blog/latest-blog-1.png" alt="" className="bg-[#F6F7FB] rounded-md mb-[10px]"/>
