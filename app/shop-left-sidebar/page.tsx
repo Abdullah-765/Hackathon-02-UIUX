@@ -14,7 +14,6 @@ export default function ShopLeftSidebar() {
 
   return (
     <div>
-      <ul id="header-heading">
         <div className="h-[20vh] mx-0 px-[40px] flex flex-col justify-center bg-[#F6F5FF] w-[100%]">
           <h1
             className={`${josefinSans.className} text-[#101750] text-[22px] font-bold`}
@@ -27,6 +26,7 @@ export default function ShopLeftSidebar() {
             <p className="text-[#FB2E86]">Shop Left Sidebar</p>
           </li>
         </div>
+        <div className="lg:mx-[150px]">
         <li className="flex flex-col items-start mt-[10px] mx-[20px]">
           <h2
             className={`${josefinSans.className} text-[#151875] text-[15px] font-bold`}
@@ -64,7 +64,6 @@ export default function ShopLeftSidebar() {
               className="border w-[80px] border-[#E7E6EF] outline-none"
             />
           </li>
-        </ul>
       </ul>
 
       <div className="flex">
@@ -1185,8 +1184,10 @@ export default function ShopLeftSidebar() {
           </li>
         </ul>
       </div>
+        </div>
 
-      <img src="/grid-default/image 1174.png" alt="" className="mt-[50px]" />
+
+      <img src="/grid-default/image 1174.png" alt="" className="mt-[50px] justify-self-center" />
     </div>
   );
 }

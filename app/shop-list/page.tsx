@@ -9,7 +9,6 @@ export default function ShopList() {
   return (
 
     <div >
-    <ul>
     <div className="h-[20vh] mx-0 px-[40px] flex flex-col justify-center bg-[#F6F5FF] w-[100%]">
     <h1
           className={`${josefinSans.className} text-[#101750] text-[22px] font-bold`}
@@ -22,7 +21,8 @@ export default function ShopList() {
           <p className="text-[#FB2E86]">Shop List</p>
         </li>
       </div>
-      <li className="flex flex-col items-start mt-[10px] mx-[20px]" >
+      <div className="mx-[150px]">
+      <li className="flex flex-col items-start mt-[10px]" >
         <h2
           className={`${josefinSans.className} text-[#151875] text-[15px] font-bold`}
         >
@@ -32,7 +32,7 @@ export default function ShopList() {
           About 9620 results (0.62 second)
         </p>
       </li>
-      <ul className="flex flex-wrap gap-[10px] mx-[20px] mt-[10px]">
+      <ul className="flex flex-wrap gap-[10px] mt-[10px]">
         <li>
           <p className="text-[#182378]">Per Page:</p>
           <input
@@ -61,9 +61,8 @@ export default function ShopList() {
         </li>
       </ul>
 
-      </ul>
 
-      <ul className="grid grid-cols-1 gap-[35px] mt-[40px] mx-[20px] place-items-center">
+      <ul className="grid grid-cols-1 gap-[35px] mt-[40px] place-items-center">
     <li className="flex items-center justify-center shadow-sm gap-[10px] p-[10px] m-0 max-h-[150px]">
             <img src="/shop-list/Rectangle 32.png" alt="" className="w-[150px]"/>
             <ul className="flex flex-col justify-center gap-[5px] w-full">
@@ -261,6 +260,8 @@ export default function ShopList() {
             </ul>
     </li>
     </ul>
+      </div>
+
         <img src="/grid-default/image 1174.png" alt="" className="mt-[50px]" />
     </div>
 

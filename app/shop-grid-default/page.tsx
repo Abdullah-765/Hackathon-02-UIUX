@@ -19,7 +19,9 @@ export default function GridDefault() {
           <p className="text-[#FB2E86]">Shop Grid Default</p>
         </li>
       </div>
-      <li className="flex flex-col items-start mt-[10px] mx-[20px]" >
+
+      <div className="mx-[20px] lg:mx-[150px]">
+              <li className="flex flex-col items-start mt-[10px]" >
         <h2
           className={`${josefinSans.className} text-[#151875] text-[15px] font-bold`}
         >
@@ -29,7 +31,7 @@ export default function GridDefault() {
           About 9620 results (0.62 second)
         </p>
       </li>
-      <ul className="flex flex-wrap gap-[10px] mx-[20px] mt-[10px]">
+      <ul className="flex flex-wrap gap-[10px] mt-[10px]">
         <li>
           <p className="text-[#182378]">Per Page:</p>
           <input
@@ -58,7 +60,7 @@ export default function GridDefault() {
         </li>
       </ul>
 
-    <ul className="grid grid-cols-2 gap-[15px] mt-[20px] mx-[20px] lg:grid-cols-4">
+    <ul className="grid grid-cols-2 gap-[15px] mt-[20px] lg:grid-cols-4">
     <li className="flex items-center p-[17px] justify-center flex-col shadow-sm">
             <img src="/grid-default/10011 1.png" alt="" className="h-[65%] mb-[10px]"/>
             <ul className="flex justify-center bg-white flex-col items-center w-full gap-[4px] ">
@@ -252,7 +254,9 @@ export default function GridDefault() {
             </ul>
     </li>
     </ul>
-        <img src="/grid-default/image 1174.png" alt="" className="mt-[50px]" />
+        <img src="/grid-default/image 1174.png" alt="" className="mt-[50px] justify-self-center" />
+      </div>
+
     </div>
   );
 }

@@ -11,6 +11,7 @@ import {
   PaginationItem,
   PaginationLink,
 } from "@/components/ui/pagination"
+import Link from "next/link";
 
 export default function BlogPage() {
     return (
@@ -49,7 +50,7 @@ export default function BlogPage() {
                       <ul>
                         <h3 className={`${josefinSans.className} text-[15px] text-[#1A0B5B]  font-bold mt-[10px]`}>Mauris at orci non vulputate diam tincidunt nec.</h3>
                         <p className='text-[#72718F] leading-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.</p>
-                        <p className='leading-6 font-border text-[#1A0B5B]'>Read More <span></span></p>
+                        <Link href={"/single-blog"} className='leading-6 font-border text-[#1A0B5B] hover:underline hover:text-[#FB2E86]'>Read More</Link>
                       </ul>
                     </div>
                   </div>
@@ -63,7 +64,7 @@ export default function BlogPage() {
                       <ul>
                         <h3 className={`${josefinSans.className} text-[15px] text-[#1A0B5B]  font-bold mt-[10px]`}>Mauris at orci non vulputate diam tincidunt nec.</h3>
                         <p className='text-[#72718F] leading-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.</p>
-                        <p className='leading-6 font-border text-[#1A0B5B]'>Read More <span></span></p>
+                        <Link href={"/single-blog"} className='leading-6 font-border text-[#1A0B5B] hover:underline hover:text-[#FB2E86]'>Read More</Link>
                       </ul>
                     </div>
                   </div>
@@ -77,7 +78,7 @@ export default function BlogPage() {
                       <ul>
                         <h3 className={`${josefinSans.className} text-[15px] text-[#1A0B5B]  font-bold mt-[10px]`}>Mauris at orci non vulputate diam tincidunt nec.</h3>
                         <p className='text-[#72718F] leading-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at.</p>
-                        <p className='leading-6 font-border text-[#1A0B5B]'>Read More <span></span></p>
+                        <Link href={"/single-blog"} className='leading-6 font-border text-[#1A0B5B] hover:underline hover:text-[#FB2E86]'>Read More</Link>
                       </ul>
                     </div>
                   </div>
